@@ -27,7 +27,7 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.ClassViewHolde
     @NonNull
     @Override
     public ClassViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View varView = LayoutInflater.from(ctx).inflate(R.layout.item_card, parent, false);
+        View varView = LayoutInflater.from(ctx).inflate(R.layout.item_grid, parent, false);
         return new ClassViewHolder(varView);
     }
 
@@ -38,7 +38,6 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.ClassViewHolde
         Glide
                 .with(ctx)
                 .load(pahlawan.getFoto())
-                .centerCrop()
                 .into(holder.ivGrid);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
